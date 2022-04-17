@@ -1,6 +1,5 @@
 nodes:
 - input.visual:
-    # source: data/sample/right.mp4
     source: data/solution/right.mp4
 - model.posenet
 - custom_nodes.dabble.assess
