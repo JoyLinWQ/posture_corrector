@@ -1,0 +1,10 @@
+# data folders except sample files/folders
+pose_estimation/data/*.mp4
+!pose_estimation/data/sample/*.mp4
+!pose_estimation/data/solution/*.mp4
+pose_estimation/PeekingDuck/data/output/*.mp4
+!pose_estimation/PeekingDuck/data/output/sample/*.mp4
+!pose_estimation/PeekingDuck/data/output/solution/*.mp4
+
+# cached folders
+**/__pycache__/**
