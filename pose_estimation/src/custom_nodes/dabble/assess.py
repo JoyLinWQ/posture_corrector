@@ -23,7 +23,7 @@ KP_LEFT_HIP = 11
 def map_keypoint_to_image_coords(
     keypoint: List[float], image_size: Tuple[int, int]
 ) -> List[int]:
-    """Second helper function to convert relative keypoint coordinates to
+    """Helper function to convert relative keypoint coordinates to
     absolute image coordinates.
     Keypoint coords ranges from 0 to 1
     where (0, 0) = image top-left, (1, 1) = image bottom-right.
