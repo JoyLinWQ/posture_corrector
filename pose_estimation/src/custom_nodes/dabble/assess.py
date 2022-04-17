@@ -13,7 +13,7 @@ RED = (255, 0, 0)
 YELLOW = (0, 255, 255)
 BLACK = (51, 0, 0)
 THRESHOLD = 0.1               # ignore keypoints below this threshold
-OFFSET = 0.03              # 0.03offset between hip and shoulder scaled x coordinates
+OFFSET = 0.03                 # offset between hip and shoulder scaled x coordinates
 DIRECTION = "right"           # right-facing checks shoulder>hip, left-facing checks shoulder<hip
 KP_RIGHT_EAR = 4              # PoseNet's skeletal keypoints
 KP_RIGHT_SHOULDER = 6
@@ -37,7 +37,7 @@ def map_keypoint_to_image_coords(
     Returns:
         List[int]: x, y in integer image coords
     """
-    width, height = image_size[0], image_size[1] #ori
+    width, height = image_size[0], image_size[1]
     x, y = keypoint
     x *= width
     y *= height
@@ -52,7 +52,6 @@ def draw_text(img, x, y, text_str: str, color_code, fontscale: float):
       text=text_str,
       org=(x, y),
       fontFace=cv2.FONT_HERSHEY_SIMPLEX,
-    #   fontScale=0.4,
       fontScale=fontscale,
       color=color_code,
       thickness=2,
@@ -91,7 +90,6 @@ class Node(AbstractNode):
         # calculate angle between right ear and right shoulder
         # get required inputs from pipeline
         img = inputs["img"]
-        # bboxes = inputs["bboxes"]
         keypoints = inputs["keypoints"]
         keypoint_scores = inputs["keypoint_scores"]
 

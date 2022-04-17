@@ -1,13 +1,9 @@
 nodes:
 - input.visual:
-    # source: https://storage.googleapis.com/peekingduck/videos/wave.mp4
-    source: data/sample/right.mp4
-    # source: data/solution/right.mp4
-    # source: data/how_to_1.mp4
+    # source: data/sample/right.mp4
+    source: data/solution/right.mp4
 - model.posenet
 - custom_nodes.dabble.assess
 - draw.poses
 - output.screen
 - output.media_writer
-
-# source: https://www.youtube.com/watch?v=IWUJbYS5VnU
