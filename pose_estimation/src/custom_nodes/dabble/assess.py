@@ -66,9 +66,7 @@ class Node(AbstractNode):
     def __init__(self, config: Dict[str, Any] = None, **kwargs: Any) -> None:
         super().__init__(config, node_path=__name__, **kwargs)
 
-        # setup object working variables
         self.shoulder_before_hip = None
-        self.offset = OFFSET
         self.posture = None
 
     def run(self, inputs: Dict[str, Any]) -> Dict[str, Any]:  # type: ignore
@@ -102,7 +100,7 @@ class Node(AbstractNode):
 
             if keypoint_score >= THRESHOLD:
                 x, y = map_keypoint_to_image_coords(keypoints.tolist(), img_size)
-                x_y_str = f"({x}, {y})"
+                # x_y_str = f"({x}, {y})"
 
                 if i == KP_RIGHT_SHOULDER:
                     right_shoulder = keypoints
@@ -153,14 +151,14 @@ class Node(AbstractNode):
         # compare shoulder and hip
         if (hip is not None and shoulder is not None):
             if DIRECTION == "right":
-                if shoulder[0] > (hip[0] - self.offset):
+                if shoulder[0] > (hip[0] - OFFSET):
                     self.shoulder_before_hip = True
                     self.posture = "Bad :("
                 else:
                     self.shoulder_before_hip = False
                     self.posture = "Good :)"
             elif DIRECTION == "left":
-                if shoulder[0] < (hip[0] + self.offset):
+                if shoulder[0] < (hip[0] + OFFSET):
                     self.shoulder_before_hip = True
                     self.posture = "Bad :("
                 else:
