@@ -24,7 +24,8 @@ $ peekingduck run
 
 4. Watch the output in a new popup window (below), where pose estimation draws shoulder and hip keypoints that are used to calculate whether a particular posture is good or bad. This output will be automatically saved to `"...\posture_corrector\pose_estimation\PeekingDuck\data\output\<timestamp>.mp4"` when the run is completed.
 
-![solution_gif](https://github.com/JoyLinWQ/posture_corrector/blob/main/PeekingDuck/data/output/solution/right-Trim.gif)
+![solution_gif](https://github.com/JoyLinWQ/posture_corrector/blob/main/pose_estimation/PeekingDuck/data/output/solution/right-Trim.gif)
+
 
 A good posture is where the shoulder keypoint is before the hip keypoint, and vice versa. A small offset is added to the hip keypoint to correct slight differences in estimated poses from actual posture.
 
