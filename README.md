@@ -78,7 +78,9 @@ $ peekingduck run
 ```
 
 # Future Improvements
-Real-time video streaming from a camera strategically placed at a user's left or right side may be used as an input data source, and the output posture detected could be sent to user's mobile application. A desired feedback could be to give short warning beeps when bad posture is detected so that user can immediately correct his/her posture.
+1. More keypoints like ears and knees can be included to have a better overall assessment of the posture. 
+
+2. Real-time video streaming from a camera strategically placed at a user's left or right side may be used as an input data source, and the output posture detected could be sent to user's mobile application. A desired feedback could be short warning beeps when bad posture is detected so that user can instantly correct his/her posture.
 
 # Author
 Joy Lin [Email](jlwq07@hotmail.com) | [GitHub Repository Link](https://github.com/JoyLinWQ/posture_corrector)
